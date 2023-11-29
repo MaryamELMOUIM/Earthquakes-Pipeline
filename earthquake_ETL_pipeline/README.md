@@ -1,69 +1,38 @@
-# Earthquake Data Pipeline and Visualization
+# Earthquake Data Processing Pipeline
 
-## Project Overview:
+## Project Overview
 
-**Project Description:**
-The project focuses on creating a comprehensive data solution for earthquake information. It encompasses two main phases: an ETL (Extract, Transform, Load) data pipeline and data visualization. The goal is to collect real-time earthquake data, process it using PySpark, store it in MongoDB, and present meaningful insights through visualizations.
+The Earthquake Data Processing Pipeline is a comprehensive data engineering project designed to collect, process, and store earthquake data obtained from the USGS Earthquake Hazards Program. The pipeline automates the workflow, ensuring a seamless and efficient process from data retrieval to storage.
 
-## Project Phases:
+## Components
 
-### Phase One: ETL Data Pipeline
-   - **Objective:** Develop a robust ETL pipeline to collect, process, and store live earthquake data.
-   - **Key Components:**
-     - Web Scraper (`web_scraper.py`): Extracts earthquake data through web scraping.
-     - Data Processor (`data_processor.py`): Utilizes PySpark for data cleaning and transformation.
-     - MongoDB Utility (`mongo_util.py`): Manages connections and data interactions with MongoDB.
-     - Apache Airflow DAG (`airflow_dag.py`): Orchestrates and schedules tasks in the ETL workflow.
+### 1. Web Scraper (web_scraper.py)
 
-### Phase Two: Data Visualization
-   - **Objective:** Visualize processed earthquake data to derive meaningful insights.
-   - **Options:**
-     1. **Informative Dashboard:**
-        - Pros: Interactive, user-friendly, customizable.
-        - Cons: May require third-party dashboarding tools.
-     2. **Flask Web Dashboard:**
-        - Pros: Customizable, integrates well with Python visualization libraries.
-        - Cons: Requires additional development effort.
+- Retrieves earthquake data from the USGS GeoJSON feed (`all_month.geojson`).
+- Extracts relevant information such as earthquake magnitude, location, time, and coordinates.
+- Prepares the data for further processing.
 
-## Project Objectives:
+### 2. Data Processor (data_processor.py)
 
-1. **Collect Real-Time Earthquake Data:**
-   - Implement a web scraper to gather live earthquake data from a reliable source.
+- Ingests processed earthquake data into a Spark DataFrame using PySpark.
+- Tasks include filtering earthquakes with a magnitude greater than 2.0, handling missing values, and converting data types for consistency.
+- Optimizes the dataset by transforming geo-coordinates and dropping unnecessary columns.
 
-2. **ETL Processing with PySpark:**
-   - Develop a PySpark-based data processor to clean, transform, and structure the collected data.
+### 3. MongoDB Utility (mongo_util.py)
 
-3. **Efficient Storage with MongoDB:**
-   - Utilize MongoDB for storing processed earthquake data, ensuring scalability and quick retrieval.
+- Provides utility functions for interacting with MongoDB.
+- Includes functions to establish a Spark session, create a MongoDB client, load data from MongoDB into a Spark DataFrame, and save a Spark DataFrame back to MongoDB.
 
-4. **Automated Workflow with Apache Airflow:**
-   - Design an Apache Airflow DAG to automate and schedule the execution of ETL tasks.
+### 4. Airflow DAG (airflow_dag.py)
 
-5. **Meaningful Data Visualization:**
-   - Visualize earthquake data through either an informative dashboard or a Flask web dashboard.
+- Orchestrates the data pipeline using Apache Airflow.
+- Defines tasks for web scraping (`web_scraper`) and data processing (`data_processor`).
+- Task dependencies ensure web scraping is completed before data processing begins.
 
-## Technologies Used:
+### 5. Configuration (config.py)
 
-1. **Web Scraping:**
-   - Python, requests library.
+- Centralized configuration details, such as MongoDB connection parameters and other project-specific settings.
 
-2. **Data Processing:**
-   - PySpark for efficient big data processing.
+### 6. Requirements (requirements.txt)
 
-3. **Database:**
-   - MongoDB as the NoSQL database for storing processed data.
-
-4. **Workflow Orchestration:**
-   - Apache Airflow for task automation and scheduling.
-
-5. **Data Visualization (Options):**
-   - Informative Dashboard: Tableau, Power BI, or similar tools.
-   - Flask Web Dashboard: Flask, Python visualization libraries (e.g., Plotly, Bokeh).
-
-## Next Steps:
-
-1. Complete the implementation of the ETL data pipeline.
-2. Choose the preferred data visualization option (dashboard or Flask web dashboard).
-3. Implement the selected visualization approach, showcasing insights from the earthquake data.
-
-By successfully executing both phases, the project aims to establish an end-to-end solution for earthquake data, combining data processing efficiency with insightful visualizations.
+- Lists dependencies required for the project.
