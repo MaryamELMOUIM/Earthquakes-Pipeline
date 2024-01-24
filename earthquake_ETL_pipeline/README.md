@@ -3,6 +3,7 @@
 ## Project Overview
 
 The Earthquake Data Processing Pipeline is a comprehensive data engineering project designed to collect, process, and store earthquake data obtained from the USGS Earthquake Hazards Program. The pipeline automates the workflow, ensuring a seamless and efficient process from data retrieval to storage.
+![USGS Earthquakes Feed - GeoJSON (1)](https://github.com/MaryamELMOUIM/Earthquakes_DataViz/assets/152428007/6b1e08f6-4db9-40b2-bf9c-35282ed43a21)
 
 ## Components
 
