@@ -14,16 +14,15 @@ The project focuses on creating a comprehensive data solution for earthquake inf
      - Data Processor (`data_processor.py`): Utilizes PySpark for data cleaning and transformation.
      - MongoDB Utility (`mongo_util.py`): Manages connections and data interactions with MongoDB.
      - Apache Airflow DAG (`airflow_dag.py`): Orchestrates and schedules tasks in the ETL workflow.
+       ![USGS Earthquakes Feed - GeoJSON (1)](https://github.com/MaryamELMOUIM/Earthquakes_DataViz/assets/152428007/e4c3a6c9-c481-4702-ba86-9e0f88f07e30)
+
 
 ### Phase Two: Data Visualization
    - **Objective:** Visualize processed earthquake data to derive meaningful insights.
-   - **Options:**
-     1. **Informative Dashboard:**
-        - Pros: Interactive, user-friendly, customizable.
-        - Cons: May require third-party dashboarding tools.
-     2. **Flask Web Dashboard:**
-        - Pros: Customizable, integrates well with Python visualization libraries.
-        - Cons: Requires additional development effort.
+   - **Visualization Tool:**
+     - **Tableau:**
+        - Pros: Integrates seamlessly with processed data, widely used for data visualization.
+        - Cons: May require a learning curve.
 
 ## Project Objectives:
 
@@ -40,7 +39,7 @@ The project focuses on creating a comprehensive data solution for earthquake inf
    - Design an Apache Airflow DAG to automate and schedule the execution of ETL tasks.
 
 5. **Meaningful Data Visualization:**
-   - Visualize earthquake data through either an informative dashboard or a Flask web dashboard.
+   - Leverage Tableau for creating insightful and interactive visualizations.
 
 ## Technologies Used:
 
@@ -56,14 +55,6 @@ The project focuses on creating a comprehensive data solution for earthquake inf
 4. **Workflow Orchestration:**
    - Apache Airflow for task automation and scheduling.
 
-5. **Data Visualization (Options):**
-   - Informative Dashboard: Tableau, Power BI, or similar tools.
-   - Flask Web Dashboard: Flask, Python visualization libraries (e.g., Plotly, Bokeh).
+5. **Data Visualization:**
+   - Tableau for creating insightful and interactive visualizations.
 
-## Next Steps:
-
-1. Complete the implementation of the ETL data pipeline.
-2. Choose the preferred data visualization option (dashboard or Flask web dashboard).
-3. Implement the selected visualization approach, showcasing insights from the earthquake data.
-
-By successfully executing both phases, the project aims to establish an end-to-end solution for earthquake data, combining data processing efficiency with insightful visualizations.
