@@ -14,7 +14,8 @@ The project focuses on creating a comprehensive data solution for earthquake inf
      - Data Processor (`data_processor.py`): Utilizes PySpark for data cleaning and transformation.
      - MongoDB Utility (`mongo_util.py`): Manages connections and data interactions with MongoDB.
      - Apache Airflow DAG (`airflow_dag.py`): Orchestrates and schedules tasks in the ETL workflow.
-       ![USGS Earthquakes Feed - GeoJSON (1)](https://github.com/MaryamELMOUIM/Earthquakes_DataViz/assets/152428007/e4c3a6c9-c481-4702-ba86-9e0f88f07e30)
+     ![USGS Earthquakes Feed - GeoJSON (2)](https://github.com/MaryamELMOUIM/Earthquakes_DataViz_BOUMAZZOURH_ELMOUIM/assets/152428007/d2c73c5b-3961-46be-afaf-fd5d79a8178b)
+
 
 
 ### Phase Two: Data Visualization
