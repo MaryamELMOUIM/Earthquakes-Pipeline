@@ -1,2 +1,2 @@
 Tableau Public: 
-[Link](https://github.com/MaryamELMOUIM/Earthquakes_DataViz_BOUMAZZOURH_ELMOUIM)
+[Link](https://public.tableau.com/views/earthquakeproject_17036233646240/Tableaudebord5?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
