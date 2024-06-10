@@ -4,11 +4,11 @@ from urllib.parse import quote_plus
 
 class Config:
     # Set up the MongoDB connection details
-    password = 'MAR@yam123'
+    password = ''
     escaped_password = quote_plus(password)
 
     # Use escaped password in URI
-    MONGO_URI = f"mongodb+srv://maryam_elmou:{escaped_password}@bigdata.zdq8pq6.mongodb.net/?retryWrites=true&w=majority"
+    MONGO_URI = f""
     
     DATABASE_NAME = "weather_database"
     INPUT_COLLECTION = "all_month_earthquake"
