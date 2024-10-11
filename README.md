@@ -24,6 +24,10 @@ The project focuses on creating a comprehensive data solution for earthquake inf
      - **Tableau:**
         - Pros: Integrates seamlessly with processed data, widely used for data visualization.
         - Cons: May require a learning curve.
+![image](https://github.com/user-attachments/assets/232653ce-ca57-4b51-8115-5b08a20bbec4)
+
+![image](https://github.com/user-attachments/assets/51606bc4-5e59-42ea-b09d-73cdd0fdb379)
+
 
 ## Project Objectives:
 
